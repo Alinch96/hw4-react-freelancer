@@ -145,7 +145,7 @@ const GuessNumbers = () => {
   }, [isGameStarted]);
 
   const activePlayerId =
-    playedNumbers_1.length === playedNumbers_2.length ? 2 : 1;
+    playedNumbers_1.length === playedNumbers_2.length ? 1 : 2;
 
   return (
     <div className={styles.gameField}>
