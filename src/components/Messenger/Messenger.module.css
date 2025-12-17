@@ -1,0 +1,95 @@
+.chatWrapper {
+  background: radial-gradient(
+    circle at top left,
+    #020617 0,
+    #020617 55%,
+    #000 100%
+  );
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 16px 14px;
+  min-width: 360px;
+  max-width: 420px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chatTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chatTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chatSubtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.chatIconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border: 1px solid rgba(34, 197, 94, 0.75);
+}
+
+.chatBody {
+  margin-top: 6px;
+  background-image: radial-gradient(
+      circle at top,
+      rgba(148, 163, 184, 0.3),
+      transparent 60%
+    ),
+    radial-gradient(circle at bottom, rgba(15, 23, 42, 0.9), #020617 70%);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(15, 23, 42, 0.95);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.messagesScroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-bottom: 8px;
+}
+
+.messagesScroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messagesScroll::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 999px;
+}
+
+.messagesScroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4ade80, #22c55e);
+  border-radius: 999px;
+}
+
+.messagesScroll {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e rgba(15, 23, 42, 0.9);
+}

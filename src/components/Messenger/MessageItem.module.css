@@ -1,0 +1,116 @@
+.messageBubble {
+  max-width: 78%;
+  padding: 8px 10px 6px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.95);
+  color: var(--text-main);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation-duration: 0.22s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes messageEnterLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px) translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes messageEnterRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px) translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+.messageLeft {
+  animation-name: messageEnterLeft;
+}
+
+.messageRight {
+  animation-name: messageEnterRight;
+}
+
+.messageText {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.messageFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.actionsLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionsRight {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  transition: background var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.iconButton span {
+  min-width: 10px;
+  text-align: right;
+}
+
+.iconButton svg {
+  font-size: 13px;
+}
+
+.iconButton:hover {
+  transform: translateY(-1px);
+}
+
+.likeButton {
+  border-color: rgba(34, 197, 94, 0.6);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.dislikeButton {
+  border-color: rgba(239, 68, 68, 0.65);
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.deleteButton {
+  border-color: rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text-muted);
+  padding-inline: 5px;
+}

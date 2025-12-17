@@ -1,0 +1,10 @@
+.looserMessage {
+  margin: 4px 0 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: var(--danger-soft);
+  border: 1px solid rgba(239, 68, 68, 0.75);
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 500;
+}

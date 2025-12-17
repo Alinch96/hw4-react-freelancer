@@ -1,0 +1,17 @@
+.messageList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messageItem {
+  display: flex;
+}
+
+.messageItem:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.messageItem:nth-child(even) {
+  justify-content: flex-end;
+}

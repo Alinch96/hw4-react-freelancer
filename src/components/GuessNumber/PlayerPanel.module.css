@@ -1,0 +1,196 @@
+.playerWrapper {
+  flex: 1;
+  min-width: 0;
+  border-radius: var(--radius-md);
+  padding: 14px 14px 12px;
+  background: linear-gradient(145deg, #020617, #020617);
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.playerWrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(148, 163, 184, 0.2),
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.playerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.playerTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.turnTag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
+}
+
+.turnTagActive {
+  border-color: rgba(34, 197, 94, 0.9);
+  color: var(--accent-strong);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.playedNumbersWrapper,
+.guessedNumbersWrapper {
+  border-radius: var(--radius-sm);
+  padding: 8px 8px 6px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  height: 60px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.playedNumbersList,
+.guessedNumbersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+}
+
+.playedNumbersItem,
+.guessedNumbersItem {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.playedNumbersItem {
+  background: rgba(31, 41, 55, 0.9);
+  color: var(--text-muted);
+  border: 1px solid rgba(75, 85, 99, 0.9);
+}
+
+.guessedNumbersItem {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border: 1px solid rgba(34, 197, 94, 0.85);
+}
+
+.userAnswerWrapper {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.inputLabelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.userAnswerLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.errorMessage {
+  font-size: 11px;
+  color: var(--danger);
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.answerInput {
+  flex: 0 0 64px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: var(--bg-input);
+  color: var(--text-main);
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast), transform var(--transition-fast);
+}
+
+.answerInput:focus-visible {
+  border-color: rgba(34, 197, 94, 0.9);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.8);
+  background: #020617;
+}
+
+.answerInput::-webkit-inner-spin-button,
+.answerInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.submitMoveButton {
+  flex: 1;
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: radial-gradient(circle at top, #0b1120, #020617);
+  color: var(--text-main);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.submitMoveButton:disabled {
+  opacity: 0.55;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+.submitMoveButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+}
+
+.submitMoveButton:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.9);
+}

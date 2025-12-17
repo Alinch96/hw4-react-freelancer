@@ -1,0 +1,169 @@
+.gameField {
+  background: radial-gradient(circle at top left, #1f2937 0, #020617 60%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px 24px 20px;
+  min-width: 360px;
+  max-width: 520px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  position: relative;
+  height: 740px;
+}
+
+.gameField::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 0, rgba(34, 197, 94, 0.08), transparent 55%);
+  pointer-events: none;
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.gameTitle {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.gameSubtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.gameStatusBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.roundBadge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: var(--text-muted);
+}
+
+.statusPill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusPillActive {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border: 1px solid rgba(34, 197, 94, 0.55);
+}
+
+.statusPillDisabled {
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text-muted);
+  border: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.looserMessageHolder {
+  min-height: 80px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity .2s ease;
+}
+
+.placeholder {
+  display: block;
+  height: 1em; 
+  opacity: 0;
+}
+
+.playersPanels {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.gameButton {
+  flex: 1;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  background: linear-gradient(145deg, #020617, #020617);
+  color: var(--text-main);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.gameButtonPrimary {
+  background: radial-gradient(circle at top, #22c55e, #15803d);
+  border-color: rgba(34, 197, 94, 0.9);
+  color: #022c22;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+
+.gameButtonSecondary {
+  background: radial-gradient(circle at top, #0b1120, #020617);
+}
+
+.gameButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+.gameButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+}
+
+.gameButtonPrimary:not(:disabled):hover {
+  background: radial-gradient(circle at top, #4ade80, #16a34a);
+}
+
+.gameFooterHint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
