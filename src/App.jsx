@@ -1,4 +1,3 @@
-import './App.css'
 import GuessNumbers from './components/GuessNumber/GuessNumbers'
 import Messenger from './components/Messenger/Messenger'
 
